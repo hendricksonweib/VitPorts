@@ -1,12 +1,17 @@
 import { LoginForm } from "@/components/login/LoginForm"
 import Background from "../../../public/background.png"
-export default function LoginPage() {
+
+interface LoginPageProps {
+  onLogin: () => void
+}
+
+export default function LoginPage({ onLogin }: LoginPageProps) {
   return (
-    <div className="grid min-h-svh lg:grid-cols-2 ">
+    <div className="grid min-h-svh lg:grid-cols-2">
       <div className="flex flex-col gap-4 p-6 lg:gap-8 lg:p-12">
         <div className="flex flex-1 items-center justify-center">
           <div className="w-full max-w-xs">
-            <LoginForm />
+            <LoginForm onLogin={onLogin} />
           </div>
         </div>
       </div>
