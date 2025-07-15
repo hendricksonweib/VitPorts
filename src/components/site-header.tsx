@@ -10,7 +10,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { useSidebar } from "@/components/ui/sidebar"
-import LogoHermes from "../../public/logohermes.png"
+import LogoPrimary from "../../public/logoprimary.png"
 
 export function SiteHeader() {
   const { toggleSidebar } = useSidebar()
@@ -24,7 +24,7 @@ export function SiteHeader() {
           <BreadcrumbList>
             <BreadcrumbItem>
               <BreadcrumbLink href="#">
-                <img src={LogoHermes} alt="logo"  />
+                <img src={LogoPrimary} alt="logo"  />
               </BreadcrumbLink>
             </BreadcrumbItem>
           </BreadcrumbList>

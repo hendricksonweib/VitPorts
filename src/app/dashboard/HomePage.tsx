@@ -1,8 +1,13 @@
+import MapView from "@/components/MapView";
+import HealthStats from "@/components/HealthStats";
+
 export default function HomePage() {
   return (
-            <div className="flex flex-col items-center justify-center h-full">
-              <h1 className="text-2xl font-bold">Welcome to the Dashboard</h1>
-              <p className="mt-4 text-gray-600">This is a simple sidebar layout with a header and a search form.</p>
-            </div>
-  )
+    <div className="p-4">
+      <div className="mb-4">
+        <MapView height="250px" />
+      </div>
+      <HealthStats bpm={78} spo2={97} temperature={36.5} stressLevel={45} />
+    </div>
+  );
 }
